@@ -1,0 +1,23 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TestSuite1,,,,2023-01-11 10:18:58,2023-01-11 10:19:50,51.813s,FAILED
+,,,,,,,
+Test Cases/CalculatorTest/Addition,,,,2023-01-11 10:19:20,2023-01-11 10:19:29,9.100s,FAILED
+"response = sendRequest(findTestObject(""CalculatorSoapService/Addition""))",,,,2023-01-11 10:19:20,2023-01-11 10:19:21,1.001s,PASSED
+"response = sendRequestAndVerify(findTestObject(""CalculatorSoapService/Addition""))",,,,2023-01-11 10:19:21,2023-01-11 10:19:29,7.970s,PASSED
+"verifyElementPropertyValue(response, ""AddResponse.AddResult"", ""5"")",,,,2023-01-11 10:19:29,2023-01-11 10:19:29,0.101s,FAILED
+,,,,,,,
+Test Cases/GetBankDetails,,,,2023-01-11 10:19:29,2023-01-11 10:19:33,4.367s,PASSED
+"sendRequest(findTestObject(""SOAP Service/BLZServiceSOAP11Binding/getBank""))",,,,2023-01-11 10:19:30,2023-01-11 10:19:33,3.324s,PASSED
+,,,,,,,
+Test Cases/TestHTTPMethods,,,,2023-01-11 10:19:33,2023-01-11 10:19:46,12.318s,PASSED
+"sendRequestAndVerify(findTestObject(""UserRestService/ListUsers""))",,,,2023-01-11 10:19:34,2023-01-11 10:19:38,3.961s,PASSED
+"sendRequestAndVerify(findTestObject(""UserRestService/DeleteUser""))",,,,2023-01-11 10:19:38,2023-01-11 10:19:41,2.656s,PASSED
+"sendRequestAndVerify(findTestObject(""UserRestService/UpdateUser""))",,,,2023-01-11 10:19:41,2023-01-11 10:19:43,1.637s,PASSED
+"sendRequestAndVerify(findTestObject(""UserRestService/CreateUser""))",,,,2023-01-11 10:19:43,2023-01-11 10:19:46,2.892s,PASSED
+,,,,,,,
+Test Cases/ListUsersTest,,,,2023-01-11 10:19:46,2023-01-11 10:19:50,4.173s,PASSED
+"sendRequest(findTestObject(""UserRestService/ListUsers""))",,,,2023-01-11 10:19:47,2023-01-11 10:19:49,2.003s,PASSED
+"response = sendRequestAndVerify(findTestObject(""UserRestService/ListUsers""))",,,,2023-01-11 10:19:49,2023-01-11 10:19:50,1.165s,PASSED
+"verifyElementPropertyValue(response, ""data[1].first_name"", ""Lindsay"")",,,,2023-01-11 10:19:50,2023-01-11 10:19:50,0.030s,PASSED
+"verifyElementPropertyValue(response, ""data[1].id"", ""8"")",,,,2023-01-11 10:19:50,2023-01-11 10:19:50,0.036s,PASSED
+"verifyElementsCount(response, ""data"", 6)",,,,2023-01-11 10:19:50,2023-01-11 10:19:50,0.069s,PASSED
